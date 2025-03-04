@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homepageFragment">
+
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.gokmenmutlu.exampleinstagramclonekotlinfirebase.views.HomepageFragment"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.gokmenmutlu.exampleinstagramclonekotlinfirebase.views.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_postDetailFragment"
+            app:destination="@id/postDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.gokmenmutlu.exampleinstagramclonekotlinfirebase.views.UploadFragment"
+        android:label="fragment_upload"
+        tools:layout="@layout/fragment_upload" >
+        <action
+            android:id="@+id/action_uploadFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postDetailFragment"
+        android:name="com.gokmenmutlu.exampleinstagramclonekotlinfirebase.views.PostDetailFragment"
+        android:label="Post Detail">
+        <argument
+            android:name="postId"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="imageUrl"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action
+            android:id="@+id/action_postDetailFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/green_on_background">
+
+    <!-- Post Resmi -->
+    <ImageView
+        android:id="@+id/imageViewPost"
+        android:layout_width="match_parent"
+        android:layout_margin="3dp"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/green_on_background"/>
+
+    <!-- Post Açıklaması -->
+    <TextView
+        android:id="@+id/postUserMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paylaşan Kişi"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+    <TextView
+        android:id="@+id/postDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Açıklama"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:paddingTop="1dp"
+        android:paddingStart="4dp"/>
+    <TextView
+        android:id="@+id/postTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2 gün önce"
+        android:textSize="11sp"
+        android:paddingTop="2dp"
+        android:paddingStart="4dp"/>
+
+</LinearLayout>
